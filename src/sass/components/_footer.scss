@@ -8,26 +8,22 @@
         margin-top: 50px;
     }
 
-  
-
     &__title {
         display: flex;
         justify-content: space-between;
         padding: 40px 10px 40px 0px;
 
-        &_text{
-            margin-bottom: 0 ;
+        &_text {
+            margin-bottom: 0;
         }
 
         a {
             text-decoration: none;
-    
+
             img {
                 margin-right: 25px;
                 height: 37px;
             }
         }
     }
-
-    
 }
