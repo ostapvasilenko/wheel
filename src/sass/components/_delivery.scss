@@ -17,19 +17,27 @@
     }
 
     &__text {
-        font-size: 15px;
+        font-size: 1em;
+        line-height: 1.3;
         color: #000000;
         margin-bottom: 15px;
-        font-weight: 200;
+        font-family: DINPro;
+        font-style: normal;
 
         span {
             font-weight: 600;
         }
+
+        #link {
+            color: #00AB4D;
+        }
+
     }
+
 
     &__line {
         width: 100%;
-        height: 1px;
+        height: 0.5px;
         background-color: #00AB4D;
         margin: 25px 0px;
     }
@@ -40,17 +48,82 @@
         }
     }
 
-    #srs {
-        height: 12px;
-        width: 32px;
-    }
+    ul {
+        padding-left: 0;
 
-    ul{
-        
-        li{
+        li {
             display: flex;
             align-items: center;
+            margin-bottom: 8px;
+
+            p {
+                font-size: 1em;
+                color: #000000;
+                font-weight: 200;
+            }
+
+            img {
+                padding-right: 25px;
+                height: 12px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+.wheel {
+
+    :first-child {
+        padding-right: 0;
+    }
+
+    :last-child {
+        padding-left: 0;
+    }
+
+    :nth-child(2),
+    :nth-child(3) {
+        padding: 0px;
+    }
+   
+
+    .card {
+        margin-top: 50px;
+        border: none;
+
+        img {
+            width: 100%;
+            height: 215px;
+        }
+
+        .card-content {
+            position: absolute;
+            top: 0;
+            padding: 25px 0px 0px 30px;
+            color: #fff;
+
+            h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 20px;
+            font-size: 15px;
+            font-family: DINPro-Bold;
+            border-radius: 0px;
         }
     }
 
+    :hover .btn {
+        background-color: #fff;
+        color: #000;
+    }
 }
+
