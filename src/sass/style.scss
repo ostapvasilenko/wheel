@@ -8,10 +8,34 @@
 @import "libs/slick.scss";
 
 @import "components/delivery";
+@import "components/contacts";
 @import "components/footer";
 
 
 
 
-
+.tabs {
+    overflow: hidden;
+  }
+  
+  .tab-button {
+    background-color: #f1f1f1;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #ddd;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 20px;
+  }
+  
+  
 

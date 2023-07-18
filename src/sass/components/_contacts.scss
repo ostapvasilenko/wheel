@@ -1,0 +1,114 @@
+.contacts {
+    &__top-text {
+        font-size: 12px;
+        color: #00AB4D;
+        margin-bottom: 20px;
+        line-height: 15px;
+    }
+
+    &__titles {
+        font-size: 32px;
+        color: #000000;
+        margin-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: #000000;
+        font-family: DINPro;
+        font-style: normal;
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0px 0px 40px 0px;
+
+        li {
+            p {
+                margin: 10px 0px;
+            }
+
+            #link {
+                color: #00AB4D;
+            }
+        }
+    }
+
+    &__info {
+        margin: 10px 0px;
+    }
+
+    &__img {
+        margin: 15px 0px 10px 0px;
+    }
+
+    &__main_title {
+        font-size: 30px;
+        margin: 30px 0px;
+        text-align: center;
+    }
+
+
+    &__form {
+
+        &_img {
+            padding: 0px 0px 10px 0px !important;
+        }
+
+        p {
+            color: #999999;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #aedcbc;
+            width: 100%;
+            border-radius: 4px;
+            padding: 9px 0px 9px 10px;
+        }
+
+        label {
+            font-family: DINPro;
+        }
+
+        textarea {
+            height: 86px;
+        }
+
+        &_size {
+            :first-child {
+                padding-right: 15px;
+            }
+
+            :last-child {
+                padding-left: 15px;
+            }
+        }
+
+
+        &_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            margin-top: 18px;
+            padding: 10px 10px 10px 15px;
+            background: linear-gradient(90deg, rgba(0, 112, 79, 1) 0%, rgba(29, 166, 47, 1) 75%);
+            font-weight: 14px;
+            color: #FFF;
+            border: 1px solid #000000;
+            border-radius: 3px;
+            font-family: DINPro;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+
+            img {
+                padding: 0px 0px 3px 5px;
+            }
+        }
+    }
+}
