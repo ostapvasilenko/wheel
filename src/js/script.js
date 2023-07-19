@@ -14,5 +14,5 @@ function openPage(event, pageName) {
   }
   
   // За замовчуванням відкриємо першу сторінку
-  document.getElementById("page2").style.display = "block";
+  document.getElementById("page1").style.display = "block";
   document.getElementsByClassName("tab-button")[0].className += " active";
