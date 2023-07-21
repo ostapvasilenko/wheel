@@ -14,8 +14,9 @@
 <body>
 
   <div class="tabs">
-    <button class="tab-button" onclick="openPage(event, 'page1')">Страниця 1</button>
-    <button class="tab-button" onclick="openPage(event, 'page2')">Страниця 2</button>
+    <button class="tab-button" onclick="openPage(event, 'page1')">Страница 1</button>
+    <button class="tab-button" onclick="openPage(event, 'page2')">Страница 2</button>
+    <button class="tab-button" onclick="openPage(event, 'page3')">Страница 3</button>
   </div>
 
   <div id="page1" class="tab-content">
@@ -25,6 +26,11 @@
 
   <div id="page2" class="tab-content">
     @@include("components/_contacts.html")
+    @@include("components/_footer.html")
+  </div>
+
+  <div id="page3" class="tab-content">
+    @@include("components/_reviews.html")
     @@include("components/_footer.html")
   </div>
 
