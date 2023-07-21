@@ -73,20 +73,6 @@
 
 .wheel {
 
-    :first-child {
-        padding-right: 0;
-    }
-
-    :last-child {
-        padding-left: 0;
-    }
-
-    :nth-child(2),
-    :nth-child(3) {
-        padding: 0px;
-    }
-
-
     .card {
         margin-top: 50px;
         border: none;
@@ -126,26 +112,187 @@
         color: #000;
     }
 
+    /* Загальні стилі для навігації */
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        padding-right: 16px;
+    }
 
-    &__navigation {
-        padding-left: 50px !important;
-       
-        ul {
-           
-            li {
-                list-style: none;
-                a {
-                    color: #000000;
-                    font-family: DinPRO;
-                    img {
-                        padding: 0px 25px 0px;
-                        height: 12px;
-                        width: 12px;
-                    }
+    /* Стилі для стовпчиків */
+    .column {
+        flex-basis: 25%;
+        /* 4 стовпчики на комп'ютері */
+    }
+
+    /* Стилі для пунктів у стовпчиках */
+    .item {
+        display: flex;
+        align-items: center;
+        color: #000000;
+        margin: 15px 0px;
+        font-family: DINPro;
+    }
+
+    .item img {
+        height: 12px;
+        max-width: 12px;
+        margin-right: 25px;
+        transition: transform 0.3s ease;
+    }
+
+    .item:hover img {
+        transform: translateX(5px);
+        /* Зміщення картинки на 5px вправо при наведенні */
+    }
+
+    /* Стилі для інформації, що виступає 4 стовпчиком */
+    .information {
+        width: 32.5%;
+        /* Розміщення на всю ширину контейнера */
+        margin-top: 10px;
+        /* Додатковий відступ від стовпчиків */
+
+        &__tel {
+            display: flex;
+
+            &_img {
+                background-image: url('/img/delivery/tel.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 40px;
+                width: 40px;
+                margin-right: 10px;
+                transition: transform 0.3s ease;
+                /* Додаємо плавну анімацію повороту */
+            }
+
+            &_info {
+                font-family: DINPro;
+
+                p {
+                    font-size: 15px;
+                    color: #999999;
                 }
+
+                a {
+                    font-size: 26px;
+                    color: #000000;
+                    text-decoration: none;
+                }
+            }
+
+            /* Використовуємо :hover псевдоклас для реагування на наведення */
+            &:hover {
+                .information__tel_img {
+                    transform: rotate(45deg);
+                    /* Повертаємо картинку на 45 градусів вправо */
+                }
+
+            }
+        }
+
+
+        &__mail {
+            display: flex;
+            margin-top: 20px;
+
+            &_img {
+                background-image: url('/img/delivery/mail.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 40px;
+                width: 40px;
+                margin-right: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            &_info {
+                font-family: DINPro;
+                width: 200px;
+
+                p {
+                    font-size: 15px;
+                    color: #999999;
+                }
+
+                a {
+                    font-size: 26px;
+                    color: #000000;
+                    text-decoration: none;
+                    margin-right: 140px;
+                }
+            }
+
+            &:hover {
+                .information__mail_img {
+                    transform: rotate(45deg);
+                    /* Повертаємо картинку на 45 градусів вправо */
+                }
+
             }
         }
     }
+
+
+
+
+
+
+
+
+    /* Медіа-запит для планшетів та телефонів */
+    @media screen and (max-width:1200px) {
+
+        .column {
+            margin-right: 50px;
+        }
+    }
+
+    @media screen and (max-width:992px) {
+        .navigation {
+            flex-wrap: wrap;
+        }
+
+        .information {
+            flex-basis: 100%;
+            /* 2 стовпчики на планшеті та телефоні */
+        }
+
+        .column {
+            flex-basis: 33.3%;
+            margin-right: 0px;
+            /* 4 стовпчики на комп'ютері */
+        }
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .navigation {
+            flex-wrap: wrap;
+        }
+
+        .information {
+            flex-basis: 90%;
+            /* 2 стовпчики на планшеті та телефоні */
+        }
+
+        .column {
+            flex-basis: 50%;
+            margin-right: 0;
+            /* 4 стовпчики на комп'ютері */
+        }
+    }
+
+    @media screen and(max-width:475px) {
+        .item img {
+            margin-right: 10px;
+        }
+    }
+
 
     @media screen and (max-width:1200px) {
         & {
@@ -163,13 +310,6 @@
 
     @media screen and (max-width:992px) {
         & {
-            :first-child {
-                padding: 0;
-            }
-
-            :last-child {
-                padding: 0;
-            }
 
             .card {
                 margin-top: 0;
@@ -182,6 +322,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media screen and (max-width:992px) {
+        .container {
+            margin: 0px;
         }
     }
 }
