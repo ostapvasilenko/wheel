@@ -17,6 +17,9 @@ function openPage(event, pageName) {
 document.getElementById("page2").style.display = "block";
 document.getElementsByClassName("tab-button")[0].className += " active";
 
+
+
+
 //Зміна та додавання кольору для полів форми при нажатті 
 
 function applyShadowAndColor(element) {
