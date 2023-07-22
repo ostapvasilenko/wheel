@@ -94,8 +94,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-
             margin-top: 18px;
             padding: 10px 10px 10px 15px;
             background: linear-gradient(90deg, rgba(0, 112, 79, 1) 0%, rgba(29, 166, 47, 1) 75%);
@@ -105,9 +103,44 @@
             border-radius: 3px;
             font-family: DINPro;
             box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+            margin: 20px auto 0px;
+            transition: 0.3s ease;
 
-            img {
+            #btn_img {
                 padding: 0px 0px 3px 5px;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &_btn:hover {
+            box-shadow: none;
+            background: #0c4202;
+            transition: 0.3s ease;
+        }
+
+        :hover #btn_img {
+            transform: translateX(10px);
+        }
+
+        @media screen and(max-width: 992px) {
+            & {
+                &_btn {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+
+        @media screen and(max-width: 768px) {
+            & {
+                &_size {
+                    :first-child {
+                        padding-right: 0px;
+                    }
+
+                    :last-child {
+                        padding-left: 0px;
+                    }
+                }
             }
         }
     }
