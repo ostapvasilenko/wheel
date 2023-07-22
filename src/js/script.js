@@ -14,5 +14,33 @@ function openPage(event, pageName) {
 }
 
 // За замовчуванням відкриємо першу сторінку
-document.getElementById("page1").style.display = "block";
+document.getElementById("page2").style.display = "block";
 document.getElementsByClassName("tab-button")[0].className += " active";
+
+//Зміна та додавання кольору для полів форми при нажатті 
+
+function applyShadowAndColor(element) {
+  element.style.boxShadow = '0px 0px 10px 0px rgba(0,171,77,0.8)';
+  element.style.borderColor = '#000000'; // Змінюємо колір лінії на синій
+}
+
+function removeShadowAndColor(element) {
+  element.style.boxShadow = 'none';
+  element.style.borderColor = '#aedcbc'; // Повертаємо стандартний колір лінії
+}
+
+const formContainer = document.querySelector('.contacts__form');
+
+formContainer.addEventListener('focusin', (event) => {
+  const target = event.target;
+  if (target.matches('input, textarea')) {
+    applyShadowAndColor(target);
+  }
+});
+
+formContainer.addEventListener('focusout', (event) => {
+  const target = event.target;
+  if (target.matches('input, textarea')) {
+    removeShadowAndColor(target);
+  }
+});
