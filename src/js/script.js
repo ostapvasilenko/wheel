@@ -14,7 +14,7 @@ function openPage(event, pageName) {
 }
 
 // За замовчуванням відкриємо першу сторінку
-document.getElementById("page2").style.display = "block";
+document.getElementById("page4").style.display = "block";
 document.getElementsByClassName("tab-button")[0].className += " active";
 
 
@@ -47,3 +47,28 @@ formContainer.addEventListener('focusout', (event) => {
     removeShadowAndColor(target);
   }
 });
+
+
+//Лічильник корзини
+
+let currentNumber = 4;
+const numberElement = document.querySelector('.cart__table_counter-number');
+const decrementElement = document.querySelector('.cart__table_counter-decrement');
+const incrementElement = document.querySelector('.cart__table_counter-increment');
+
+function updateNumber(value) {
+  const newNumber = currentNumber + value;
+  if (newNumber >= 0) {
+    currentNumber = newNumber;
+    numberElement.textContent = currentNumber;
+  }
+}
+
+decrementElement.addEventListener('click', () => {
+  updateNumber(-1);
+});
+
+incrementElement.addEventListener('click', () => {
+  updateNumber(1);
+});
+
