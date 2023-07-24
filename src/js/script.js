@@ -32,7 +32,7 @@ function removeShadowAndColor(element) {
   element.style.borderColor = '#aedcbc'; // Повертаємо стандартний колір лінії
 }
 
-const formContainer = document.querySelector('.contacts__form');
+const formContainer = document.querySelector('.contacts__form', '.cart__form');
 
 formContainer.addEventListener('focusin', (event) => {
   const target = event.target;

@@ -10,22 +10,73 @@
             <div class="col-12">
                 <table class="cart__table">
                     <tbody>
-                        <tr>
+                        <tr id="cart__table_menu">
                             <td>Наименование</td>
                             <td id="cart__font">Цена</td>
                             <td>Количество</td>
                             <td id="cart__font">Сумма</td>
                             <td>&nbsp;</td>
                         </tr>
-                        <tr>
+
+
+                        <tr id="mob_version">
                             <td class="cart__table_box">
                                 <a href="">
                                     <img class="cart__table_img" src="img/cart/img-first.png" alt="">
                                 </a>
                                 <span class="cart__table_info">
-                                    <a class="cart__table_name" href="#" target="_blank">Nokian Hakkapeliitta 5 SUV</a>
-                                    <p class="cart__table_size">Типоразмер: 275/60 R17</p>
-                                    <p class="cart__table_code">Код товара 15828</p>
+                                    <a class="cart__table_info-name" href="#" target="_blank">Nokian Hakkapeliitta 5
+                                        SUV</a>
+                                    <p class="cart__table_info-size">Типоразмер: 275/60 R17</p>
+                                    <p class="cart__table_info-code">Код товара 15828</p>
+                                </span>
+                                <p class="cart__table_price">6423 р.</p>
+                                <div class="cart__table_counter">
+                                    <div class="cart__table_counter-decrement">-</div>
+                                    <div class="cart__table_counter-number">4</div>
+                                    <div class="cart__table_counter-increment">+</div>
+                                </div>
+                                <input type="text" value="25692 p." id="rezult-1">
+                                <p class="cart__table_delete">удалить из корзины &times;</p>
+                            </td>
+                        </tr>
+
+                        <tr id="mob_version">
+                            <td class="cart__table_box">
+                                <a href="">
+                                    <img class="cart__table_img" src="img/cart/img-last.png" alt="">
+                                </a>
+                                <span class="cart__table_info">
+                                    <a class="cart__table_info-name" href="#" target="_blank">Allante 5070</a>
+                                    <p class="cart__table_info-size">Типоразмер: 6.5 R16</p>
+                                    <p class="cart__table_info-code">Код товара 15445</p>
+                                </span>
+                                <p class="cart__table_price">5758 р.</p>
+                                <div class="cart__table_counter">
+                                    <div class="cart__table_counter-decrement">-</div>
+                                    <div class="cart__table_counter-number">4</div>
+                                    <div class="cart__table_counter-increment">+</div>
+                                </div>
+                                    <input type="text" value="23032 p." id="rezult-2">
+                                <p class="cart__table_delete">удалить из корзины &times;</p>
+                            <td class="cart__table_rezult">
+                                <a href=""><img src="img/cart/stroke.png" alt="">Продолжить покупки</a>
+                            </td>
+                            <td>Итого к оплате</td>
+                            <td><input type="text" value="48724" id="all-rezult"></td>
+                            </td>
+                        </tr>
+
+                        <tr id="desc_size">
+                            <td class="cart__table_box">
+                                <a href="">
+                                    <img class="cart__table_img" src="img/cart/img-first.png" alt="">
+                                </a>
+                                <span class="cart__table_info">
+                                    <a class="cart__table_info-name" href="#" target="_blank">Nokian Hakkapeliitta 5
+                                        SUV</a>
+                                    <p class="cart__table_info-size">Типоразмер: 275/60 R17</p>
+                                    <p class="cart__table_info-code">Код товара 15828</p>
                                 </span>
                             </td>
                             <td>
@@ -45,15 +96,15 @@
                                 <p class="cart__table_delete">удалить из корзины &times;</p>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="desc_size">
                             <td class="cart__table_box">
                                 <a href="">
                                     <img class="cart__table_img" src="img/cart/img-last.png" alt="">
                                 </a>
                                 <span class="cart__table_info">
-                                    <a class="cart__table_name" href="#" target="_blank">Allante 5070</a>
-                                    <p class="cart__table_size">Типоразмер: 6.5 R16</p>
-                                    <p class="cart__table_code">Код товара 15445</p>
+                                    <a class="cart__table_info-name" href="#" target="_blank">Allante 5070</a>
+                                    <p class="cart__table_info-size">Типоразмер: 6.5 R16</p>
+                                    <p class="cart__table_info-code">Код товара 15445</p>
                                 </span>
                             </td>
                             <td>
@@ -73,19 +124,101 @@
                                 <p class="cart__table_delete">удалить из корзины &times;</p>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="desc_size">
                             <td class="cart__table_rezult">
                                 <a href=""><img src="img/cart/stroke.png" alt="">Продолжить покупки</a>
                             </td>
-                            <td></td>
-                            <td>Итого к оплате</td>
+                            <td id="cart__table_bottom-text">Итого к оплате</td>
                             <td><input type="text" value="48724" id="all-rezult"></td>
-                            <td></td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+
+
+    <div class="cart__form">
+        <div class="container">
+            <form>
+                <span id="cart__form_col">
+                    <div class="col-sm-12 col-md-6">
+                        <h3 class="cart__form_title">Контактные данные</h3>
+                        <div class="cart__form_left">
+                            <span>
+                                <label for="fname">Ваше имя<img src="img/contacts/form_img.svg" alt="#"></label>
+                                <input type="text" id="fname" name="fname" required>
+                            </span>
+                            <span>
+                                <label for="fname">Фамилия</label>
+                                <input type="text" id="fname" name="fname" required>
+                            </span>
+                            <span>
+                                <label for="fname">Контактный телефон<img src="img/contacts/form_img.svg"
+                                        alt="#"></label>
+                                <input type="text" id="fname" name="fname" required>
+                            </span>
+                            <span>
+                                <label for="fname">Email (логин) <img src="img/contacts/form_img.svg" alt="#"></label>
+                                <input type="text" id="fname" name="fname" required>
+                            </span>
+                            <span>
+                                <label for="message">Комментарий к заказу <img src="img/contacts/form_img.svg" alt="#">
+                                </label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <h3 id="title__size" class="cart__form_title">Доставка</h3>
+                        <div class="cart__form_right">
+                            <span>
+                                <label for="fname">Город<img src="img/contacts/form_img.svg" alt="#"></label>
+                                <input type="text" id="fname" name="fname" required>
+                            </span>
+                            <span>
+                                <label for="fname">Адрес доставки<img src="img/contacts/form_img.svg" alt="#"></label>
+                                <input type="text" id="fname" name="fname" required>
+                            </span>
+                            <span>
+                                <label for="delivery">Вариант доставки<img src="img/contacts/form_img.svg"
+                                        alt="#"></label>
+                                <select id="delivery" name="delivery">
+                                    <option value="Доставка курьерской службой в отделение Почты России">Доставка
+                                        курьерской
+                                        службой в отделение Почты России</option>
+                                </select>
+                            </span>
+                        </div>
+                        <h3 id="title__size_last" class="cart__form_title">Оплата</h3>
+                        <input checked type="radio" name="option" id="option1" value="option1">
+                        <label id="size" for="option1">Оплатить онлайн через Единая Касса</label>
+                        <br>
+                        <input type="radio" name="option" id="option2" value="option2">
+                        <label id="size" for="option2">Оплатить по квитанции</label>
+                        <br>
+                        <input type="radio" name="option" id="option3" value="option3">
+                        <label id="size" for="option3">Оплатить на карту 4249 1700 0326 3260</label>
+                        <p class="cart__form_text">Получатель: ИП Ванин Александр Васильевич, Газпромбанк</p>
+                    </div>
+                </span>
+                <div class="col-12">
+                    <span>
+                        <input type="radio" name="option" id="option" value="option">
+                        <label for="option">Зарегистрироваться на сайте для дальнейших покупок
+                        </label>
+                    </span>
+                </div>
+                <div class="col-12">
+                    <button class="cart__form_btn" type="submit">Оформить заказ<img id="btn_img"
+                            src="img/contacts/form-btn-stroke.png" alt=""></button>
+                </div>
+                <div class="col-12">
+                    <p class="cart__form_bottom-text"><img src="img/contacts/form_img.svg" alt=""> поля, обязательные
+                        для заполнения</p>
+                </div>
+            </form>
         </div>
     </div>
 </section>
