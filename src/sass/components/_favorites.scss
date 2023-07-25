@@ -16,14 +16,16 @@
         color: #00AB4D !important;
     }
 
+
+
     ul {
-        display: flex;
-        padding-left: 25;
         margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
         li {
             font-family: DINPro;
-            padding-right: 45px;
             font-size: 15px;
         }
 
@@ -34,11 +36,8 @@
         }
     }
 
-
-
     &__card {
         display: block;
-        width: 350px;
 
         &_img {
             background-image: url('/img/favorites/disk.png');
@@ -48,6 +47,7 @@
             width: 300px;
             height: 150px;
             margin-bottom: 25px;
+            margin-left: 50px;
         }
 
         &_title {
@@ -61,6 +61,7 @@
             font-size: 15px;
             margin-bottom: 0;
             margin-top: 10px;
+            padding: 0px 50px;
 
             strong {
                 font-weight: 700;
@@ -84,7 +85,7 @@
         &_btn {
             border: 1px solid #00AB4D;
             padding: 14px 22px;
-            font-size: 15px;
+            font-size: 18px;
             transition: 0.2s all;
             color: #00AB4D;
             text-decoration: none;
@@ -94,7 +95,7 @@
         }
 
         &_btn:hover {
-            background-color: #00AB4D !important;
+            background-color: #72d09c !important;
             color: #FFF !important;
         }
 
@@ -105,4 +106,71 @@
         }
     }
 
+    @media screen and(max-width:1400px) {
+        & {
+            &__card {
+
+                &_img {
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+
+    @media screen and(max-width:1200px) {
+        & {
+            ul {
+                justify-content: start;
+            }
+
+            &__card {
+
+                &_text {
+                    padding: 0;
+                }
+
+                &_img {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+
+    @media screen and(max-width:992px) {
+        & {
+            &__card {
+
+                &_text {
+                    padding: 0;
+                }
+
+                &_img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    @media screen and(max-width:576px) {
+        & {
+            &__titles {
+                font-size: 26px;
+            }
+
+            ul {
+                display: none;
+            }
+
+            &__card {
+
+                &_text {
+                    font-size: 14px;
+                }
+
+                &_img {
+                    width: 200px;
+                }
+            }
+        }
+    }
 }
