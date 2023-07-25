@@ -1,0 +1,108 @@
+.favorites {
+    &__top-text {
+        font-size: 12px;
+        color: #00AB4D;
+        margin-bottom: 20px;
+        line-height: 15px;
+    }
+
+    &__titles {
+        font-size: 32px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+
+    &__clean-link {
+        color: #00AB4D !important;
+    }
+
+    ul {
+        display: flex;
+        padding-left: 25;
+        margin-top: 10px;
+
+        li {
+            font-family: DINPro;
+            padding-right: 45px;
+            font-size: 15px;
+        }
+
+        :nth-child(1),
+        :nth-child(3),
+        :nth-child(5) {
+            font-weight: 700;
+        }
+    }
+
+
+
+    &__card {
+        display: block;
+        width: 350px;
+
+        &_img {
+            background-image: url('/img/favorites/disk.png');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 300px;
+            height: 150px;
+            margin-bottom: 25px;
+        }
+
+        &_title {
+            color: #00AB4D !important;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        &_text {
+            font-size: 15px;
+            margin-bottom: 0;
+            margin-top: 10px;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+
+        &_brand {
+            span {
+                color: #999999;
+            }
+
+            margin-bottom: 0;
+        }
+
+        &_price {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        &_btn {
+            border: 1px solid #00AB4D;
+            padding: 14px 22px;
+            font-size: 15px;
+            transition: 0.2s all;
+            color: #00AB4D;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: DINPro;
+            margin-top: 20px !important;
+        }
+
+        &_btn:hover {
+            background-color: #00AB4D !important;
+            color: #FFF !important;
+        }
+
+        &_availability {
+            color: #00AB4D;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+    }
+
+}
