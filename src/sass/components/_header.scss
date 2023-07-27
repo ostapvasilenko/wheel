@@ -1,0 +1,368 @@
+.header {
+    margin-top: 10px;
+    font-family: Roboto;
+
+    .header-top {
+        background-color: #F4F4F4;
+        height: 55px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_menu {
+                ul {
+                    margin-bottom: 0;
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        margin: 0px 30px;
+
+                        a {
+                            text-decoration: none;
+                            color: #7D7D7D;
+                            font-size: 13px;
+                        }
+
+                        :hover {
+                            color: #D63731;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__login {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: #D63731;
+                text-decoration: none;
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+
+        @media screen and(max-width:1400px) {
+            & {
+                &__info {
+                    &_menu {
+                        ul {
+                            li {
+                                margin: 0px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and(max-width:1200px) {
+            & {
+                &__info {
+                    &_menu {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media screen and(max-width:768px) {
+            & {
+                display: none;
+            }
+        }
+    }
+
+    .header-main {
+        padding: 20px 0px;
+
+        #header-main__position {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__info {
+            span {
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+
+                p {
+                    margin-left: 15px;
+                    margin-bottom: 0;
+                    color: #A59B9A;
+                }
+            }
+
+            img {
+                height: 12px;
+                width: 12px;
+            }
+        }
+
+        &__phone {
+            display: flex;
+
+            &_main-img {
+                height: 12px;
+                width: 12px;
+                margin: 5px 15px 0px 0px;
+            }
+
+            &_img {
+                width: 19px;
+                height: 19px;
+                margin: 32px 0px 0px 10px;
+            }
+
+            strong {
+                width: 170px;
+
+                a {
+                    text-decoration: none;
+                    color: #000000;
+                    font-size: 19px;
+                }
+            }
+
+            :hover {
+                color: #D63731;
+            }
+        }
+
+        &__cart {
+            &_count {
+                width: 50px;
+                height: 50px;
+                display: block;
+                border-radius: 100px;
+                text-decoration: none;
+                position: relative;
+                white-space: nowrap;
+                float: left;
+                background: url('/img/header/cart-icon.png') center center no-repeat #D63731;
+                transition: 0.3s;
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100px;
+                    background: #FF9F00;
+                    border: 2px solid #FFFFFF;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    line-height: 20px;
+                    font-size: 12px;
+                    color: #fff;
+                    text-align: center;
+                    box-sizing: content-box;
+                }
+
+            }
+
+            &_text {
+                float: left;
+                padding: 8px 0px;
+                line-height: 15px;
+                padding-left: 10px;
+
+                p {
+                    strong {
+                        color: #000000;
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 13px;
+                    color: #999999;
+                    margin-bottom: 4px;
+                }
+            }
+
+            &_count:hover {
+                background-color: #a92520;
+            }
+        }
+
+        @media screen and(max-width:1200px) {
+            & {
+
+                &__info {
+                    display: none;
+                }
+
+                &__phone {
+                    margin-left: 180px;
+                }
+            }
+        }
+
+        @media screen and(max-width:992px) {
+            & {
+
+                &__phone {
+                    margin-left: 0px;
+                }
+
+                &__cart {
+                    &_text {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media screen and(max-width:768px) {
+            & {
+                &__phone {
+                    &_main-img {
+                        display: none;
+                    }
+                }
+
+                #header-main__position {
+                    display: block;
+                }
+
+                &__cart {
+                    float: right;
+                    margin-top: -70px;
+                }
+            }
+        }
+
+        @media screen and(max-width:576px) {
+            & {
+                &__logo {
+                    img {
+                        width: 180px;
+                    }
+                }
+
+                &__phone {
+                    width: 210px;
+
+                    strong {
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+
+                    &_img {
+                        margin: 18px 5px 0px 0px;
+                    }
+                }
+
+                &__cart {
+                    margin-top: -57px;
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        background-color: #D63731;
+
+        &__menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ul {
+                display: flex;
+                margin-bottom: 0;
+                padding: 0;
+
+                li {
+                    padding: 15px 20px;
+
+                    a {
+                        text-decoration: none;
+
+                        font-weight: bold;
+                        font-size: 15px;
+                        color: #FFFFFF;
+                        transition: 0.3s all;
+                    }
+
+                }
+
+                :hover {
+                    background-color: #B4281F;
+                    transition: 0.3s all;
+                }
+            }
+
+            &_stroke {
+                height: 7px;
+                width: 13px;
+                margin-left: 8px;
+            }
+        }
+
+        &__search {
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        /* Сховаємо випадаюче меню рассрочки за замовчуванням */
+        .header-bottom__menu .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            padding: 0;
+            margin: 14px 0px 0px -20px;
+            list-style: none;
+            z-index: 1;
+        }
+
+        /* Відобразимо випадаюче меню при наведенні на пункт Рассрочка */
+        .header-bottom__menu .has-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Стилі для пунктів випадаючого меню */
+        .header-bottom__menu .dropdown-menu li {
+            padding: 15px 20px;
+            border-top: 0.5px solid rgb(203, 203, 203);
+            transition: 0.5s all;
+        }
+
+        .header-bottom__menu .dropdown-menu li a {
+            color: #000000;
+            text-decoration: none;
+            display: block;
+        }
+
+        .header-bottom__menu .dropdown-menu li:hover,
+        .header-bottom__menu .dropdown-menu a:hover {
+            background-color: #FF9F00;
+            color: #FFFFFF;
+            transition: 0.5s all;
+        }
+
+
+
+
+
+        @media screen and(max-width:1200px) {
+            &__menu{
+                ul{
+                    display: none;
+                }
+            }
+        }
+    }
+}

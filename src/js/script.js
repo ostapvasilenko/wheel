@@ -14,7 +14,7 @@ function openPage(event, pageName) {
 }
 
 // За замовчуванням відкриємо першу сторінку
-document.getElementById("page5").style.display = "block";
+document.getElementById("page6").style.display = "block";
 document.getElementsByClassName("tab-button")[0].className += " active";
 
 
@@ -70,5 +70,22 @@ decrementElement.addEventListener('click', () => {
 
 incrementElement.addEventListener('click', () => {
   updateNumber(1);
+});
+
+
+
+$(document).ready(function(){
+
+	//toggle menu
+	$('.hamburger-container').click(function(){
+		$('#menu').slideToggle();
+	});
+
+	//to fix issue that toggle adds style(hides) to nav
+	$(window).resize(function(){
+		if(window.innerWidth > 1024) {
+			$('#menu').removeAttr('style');
+		}
+	});
 });
 
