@@ -1,68 +1,68 @@
-.footer {
-    margin-top: 35px;
+// .footer {
+//     margin-top: 35px;
 
-    &__line {
-        width: 100%;
-        height: 0.5px;
-        background-color: #00AB4D;
-        margin-top: 25px;
-    }
+//     &__line {
+//         width: 100%;
+//         height: 0.5px;
+//         background-color: #00AB4D;
+//         margin-top: 25px;
+//     }
 
-    &__text {
-        padding: 40px 10px 40px 0px;
-    }
+//     &__text {
+//         padding: 40px 10px 40px 0px;
+//     }
 
-    &__image {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        padding: 40px 0px;
-        margin: 0;
+//     &__image {
+//         display: flex;
+//         justify-content: end;
+//         align-items: center;
+//         padding: 40px 0px;
+//         margin: 0;
 
-        a {
-            text-decoration: none;
-        }
+//         a {
+//             text-decoration: none;
+//         }
 
-        &_link-telegram {
-            margin-right: 25px;
-            height: 35px;
-        }
-    }
+//         &_link-telegram {
+//             margin-right: 25px;
+//             height: 35px;
+//         }
+//     }
 
-    @media screen and(max-width:992px) {
-        & {
-            &__text {
-                display: block;
-                padding: 40px 10px 20px 0px;
-            }
+//     @media screen and(max-width:992px) {
+//         & {
+//             &__text {
+//                 display: block;
+//                 padding: 40px 10px 20px 0px;
+//             }
 
-            &__image {
-                padding: 10px 0px 40px 0px;
+//             &__image {
+//                 padding: 10px 0px 40px 0px;
 
-                img {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
+//                 img {
+//                     margin-right: 0;
+//                 }
+//             }
+//         }
+//     }
 
-    @media screen and(max-width:450px) {
-        & {
-            &__text {
-                padding: 40px 0px 20px 0px;
-            }
+//     @media screen and(max-width:450px) {
+//         & {
+//             &__text {
+//                 padding: 40px 0px 20px 0px;
+//             }
 
-            &__image {
-                &_last {
-                    width: 230px;
-                    height: 22px;
-                }
+//             &__image {
+//                 &_last {
+//                     width: 230px;
+//                     height: 22px;
+//                 }
 
-                &_link-telegram {
-                    margin-right: 15px;
-                    height: 34px;
-                }
-            }
-        }
-    }
-}
+//                 &_link-telegram {
+//                     margin-right: 15px;
+//                     height: 34px;
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -74,18 +74,14 @@ incrementElement.addEventListener('click', () => {
 
 
 
-$(document).ready(function(){
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.menu');
 
-	//toggle menu
-	$('.hamburger-container').click(function(){
-		$('#menu').slideToggle();
-	});
-
-	//to fix issue that toggle adds style(hides) to nav
-	$(window).resize(function(){
-		if(window.innerWidth > 1024) {
-			$('#menu').removeAttr('style');
-		}
-	});
-});
-
+menuBtn.addEventListener('click', function () {
+  menuBtn.classList.toggle('active');
+  menu.classList.toggle('active');
+})
+function closeHamburger() {
+  let checkItem = document.getElementById('menu');
+  checkItem.checked = false;
+}  
